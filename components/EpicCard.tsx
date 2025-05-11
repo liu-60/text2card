@@ -12,13 +12,15 @@ import ThemeSelector from './ThemeSelector';
 import { Switch } from "./ui/switch";
 
 const fallbackDefaultText = `
-I was surprised, as always, that how easy it was to leave—how good it felt to be gone, to be on the move, to be someplace where I had never been before and where I was never going to be again.
+反者道之动，弱者道之用
 
 
-我总是不假思索地在上路，因为出发的感觉真是太好了，世界突然充满了可能性。
+“反者道之动”​​指道的运动以对立统一与循环规律为本质，矛盾双方依存转化（如福祸相依），万物在极致处返本归初（如四季轮回）。
+​​“弱者道之用”​​强调道的功用以柔韧顺应显其力，看似无力却内含生机（如水穿石），以退为进、不争而胜。
+二者共构辩证思维：前者揭示变化规律，后者指导实践方法，主张以柔克刚、虚静守弱，实现生生不息的平衡
 
 
-- John Krakauer, Into the Wild.`;
+- 《道德经》 第四十章`;
 
 interface EpicCardProps {
     defaultText?: string;
@@ -33,7 +35,7 @@ const EpicCard: React.FC<EpicCardProps> = ({
     const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
     const [randomLayout, setRandomLayout] = useState<boolean>(false);
     const [currentTheme, setCurrentTheme] = useState<ColorTheme>(theme);
-    const [isPortraitMode, setIsPortraitMode] = useState<boolean>(false);
+    const [isPortraitMode, setIsPortraitMode] = useState<boolean>(true);
     const canvasRef = useRef<HTMLDivElement>(null);
     const [isMobile, setIsMobile] = useState<boolean>(false);
 

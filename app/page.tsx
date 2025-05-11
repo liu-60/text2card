@@ -2,9 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import Features from '../components/Features';
-import FAQ from '../components/FAQ';
-import Footer from '../components/Footer';
 
 const EpicCard = dynamic(() => import('../components/EpicCard'), { ssr: false });
 
@@ -19,10 +16,7 @@ const Page: React.FC = () => {
         <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-6 md:p-10 lg:p-16 flex flex-col items-center justify-center">
             <div className="w-full max-w-6xl mx-auto">
                 <header className="text-center mb-8">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-gray-800">Text2Card: Your Ultimate Card Maker</h1>
-                    <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-4 italic">"The easiest card maker for your thoughts and quotes"</p>
-                    <p className="text-gray-700">Create stunning cards effortlessly with our intuitive card maker. Perfect for social media, presentations, and personal use.</p>
-                </header>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-gray-800">文字转卡片</h1></header>
                 <main className="space-y-24">
                     <section className="text-center mt-16">
                         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-800">Create Your Card Now</h2>
@@ -58,11 +52,8 @@ const Page: React.FC = () => {
                         </div>
                     </section>
 
-                    <Features />
-                    <FAQ />
                 </main>
             </div>
-            <Footer />
         </div>
     );
 };

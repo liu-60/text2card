@@ -168,7 +168,9 @@ const TextPreview: React.FC<TextPreviewProps> = ({ text, fontsLoaded, randomLayo
                         fontFamily: fontsLoaded ? 'Huiwen_mingchao, sans-serif' : 'sans-serif',
                     }}
                 >
-                    {text.split('\n\n\n').map((paragraph, index) => (
+                    {text.split('\n\n').map((paragraph, index) => {
+                        console.log('paragraph',paragraph, index)
+                        return paragraph ? (
                         <p
                             key={index}
                             className="absolute w-full left-0 text-left mb-0 leading-normal"
@@ -179,7 +181,8 @@ const TextPreview: React.FC<TextPreviewProps> = ({ text, fontsLoaded, randomLayo
                         >
                             {paragraph}
                         </p>
-                    ))}
+                    ) : <></>
+                    })}
                 </div>
             </div>
         </div>
